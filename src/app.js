@@ -2,11 +2,12 @@ const express=require("express")
 
 
 const app=express()
-app.use(express.json())
+app.use(express.json());
 //const register = require("./controllers/auth.controller");
 
-const router=require("../src/routes/auth.route")
+const authrouter=require("../src/routes/auth.route");
+const roomrouter=require("./routes/room.route");
 
-app.use("/register",router)
-
+app.use("/",authrouter)
+app.use("/rooms",roomrouter)
 module.exports=app

@@ -60,4 +60,4 @@ async function login(req,res){
 res.status(500).json(err);
 }}
 
-module.exports=register
+module.exports={register,login};
