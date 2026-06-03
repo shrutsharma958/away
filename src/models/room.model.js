@@ -1,21 +1,21 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose");
 
-const roomSchema=new mongoose.Schema({
-    roomid:{
-        type:String,
-        unique:true
+const roomSchema = new mongoose.Schema({
+    roomid: {          // ✅ lowercase i
+        type: String,
+        unique: true
     },
-    host:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"user"
+    host: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user"
     },
-    isActive:{
-        type:Boolean,
-        default:true
+    isActive: {
+        type: Boolean,
+        default: true
     }
-},
-{
-    timestamps:true
+}, {
+    timestamps: true
 });
-const roomModel=mongoose.model("room",roomSchema)
-module.exports=roomModel
+
+const roomModel = mongoose.model("room", roomSchema);
+module.exports = roomModel;
