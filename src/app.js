@@ -2,8 +2,8 @@ const express=require("express")
 const cors = require("cors"); 
 
 const app=express()
-app.use(cors({             // add this block
-  origin: "http://localhost:5173",
+app.use(cors({             
+  origin: "https://away-frontend-tau.vercel.app/",
   credentials: true
 }));
 app.use(express.json());
